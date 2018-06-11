@@ -1,0 +1,29 @@
+<!-- large -->
+<mat-toolbar color="warn" fxShow="false" fxShow.gt-sm class="large"></mat-toolbar>
+<!-- small -->
+<mat-toolbar color="warn" fxHide="false" fxHide.gt-sm>
+  <mat-toolbar-row>
+    <span>Error</span>
+    <span fxFlex="1 0 auto"></span>
+    <a mat-icon-button [routerLink]="['']">
+      <mat-icon>arrow_forward</mat-icon>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="center center">
+  <!-- large -->
+  <mat-card fxShow="false" fxShow.gt-sm>
+    <mat-card-title> Error </mat-card-title>
+    <mat-card-content>
+      <pre>{{ error | async | json }}</pre>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button [routerLink]="['']">CONTINUE</a>
+    </mat-card-actions>
+  </mat-card>
+  <!-- small -->
+  <div fxLayout="column" fxHide="false" fxHide.gt-sm>
+    <pre>{{ error | async | json }}</pre>
+  </div>
+</div>

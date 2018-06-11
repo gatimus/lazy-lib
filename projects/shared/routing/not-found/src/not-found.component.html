@@ -1,0 +1,25 @@
+﻿<!-- large -->
+<mat-toolbar color="primary" fxShow="false" fxShow.gt-sm class="large"></mat-toolbar>
+<!-- small -->
+<mat-toolbar color="primary" fxHide="false" fxHide.gt-sm>
+  <mat-toolbar-row>
+    <span>Page Not Found</span>
+    <span fxFlex="1 0 auto"></span>
+    <a mat-icon-button [routerLink]="['']">
+      <mat-icon>arrow_forward</mat-icon>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="center center">
+  <!-- large -->
+  <mat-card fxShow="false" fxShow.gt-sm>
+    <mat-card-title>Page Not Found</mat-card-title>
+    <mat-card-content>The resource you are looking for does not exist.</mat-card-content>
+    <mat-card-actions>
+      <a mat-button [routerLink]="['']">HOME</a>
+    </mat-card-actions>
+  </mat-card>
+  <!-- small -->
+  <div fxLayout="column" fxHide="false" fxHide.gt-sm>The resource you are looking for does not exist.</div>
+</div>
